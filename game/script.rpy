@@ -10,18 +10,14 @@ default ocena_profesora = 0
 
 label start:
 
-
-    scene black
+    scene cue
     with dissolve
 
     "Paryż. Restauracja UEP."
-
-    scene restaurant with dissolve
-
-    "Remy, utalentowany szef kuchni, dowiaduje się, że pewien profesor z UEP jest znany ze swojej krytyki kulinarnych umiejętności."
-
+    "Remy, utalentowany szef kuchni, dowiaduje się, że pewien profesor z UEP znany ze swojej krytyki zagościł w jego restauracji."
     "Remy postanawia przygotować wyjątkowe danie, aby zdobyć uznanie profesora."
 
+    scene kitchen with dissolve
     show remy normal
     with dissolve
 
@@ -30,14 +26,18 @@ label start:
     menu:
         "Przygotuj coś lekkiego i eleganckiego.":
             $ danie = "Krewetki z mango"
+            show shrimps
             $ ocena_profesora += 2  # cena może wpływać na ocenę
         "Zaskocz go czymś nieoczekiwanym.":
             $ danie = "Kaczka w sosie borówkowym"
+            show duck
             $ ocena_profesora += 4
         "Postaw na klasyczną francuską kuchnię.":
             $ danie = "Filet z kurczaka po francusku"
+            show chicken
             $ ocena_profesora += 6 
 
+    show remy happy
     r "Najlepszym wyborem będzie [danie]."
 
     "Remy zaczyna przygotowywać danie. W trakcie gotowania masz dwie ważne decyzje do podjęcia."
@@ -60,19 +60,22 @@ label start:
             "Remy decyduje się na dłuższe pieczenie, uzyskując intensywniejszy smak."
             $ ocena_profesora += 3
 
-    "Danie jest gotowe. Remy czeka na ocenę profesora."
+    "Danie jest gotowe. Pora na ocenę profesora."
     
-    scene fancy_dining_room with dissolve
+    scene restaurant with dissolve
+
+    
+    show profesor normal
+    p "To miejsce jest naprawdę wyjątkowe, Remy. Podoba mi się panująca tu atmosfera."
 
     show remy happy with dissolve
-
-    p "To miejsce jest naprawdę wyjątkowe. Ciekawe, czy jedzenie też takie będzie."
+    r "Mam nadzieję, ze równiez danie przypadnie Panu do gustu."
 
     "Remy z uśmiechem prezentuje danie profesorowi."
 
     show profesor normal with dissolve
 
-    p "Hmm, wygląda naprawdę apetycznie. Czekam na to, aby spróbować i ocenić."
+    p "Hmm, wygląda naprawdę apetycznie."
     
     if ocena_profesora < 7:
         show profesor unhappy
@@ -82,11 +85,11 @@ label start:
             "Przyjmij krytykę z pokorą.":
                 "Remy przyjmuje krytykę z pokorą, obiecując poprawę."
                 r "Dziękuję za opinię, profesorze. Postaram się bardziej sprostać Pańskim oczekiwaniom."
-                "Profesor wychodzi z restauracji z postanowieniem o daniu miejscu kolejnej szansy w najbliszej przyszłości."
+                "Profesor wychodzi z restauracji z postanowieniem o powrocie w najbliszej przyszłości."
             "Wybuchnij z gniewem.":
                 "Remy nie potrafi ukryć swojego rozgoryczenia."
                 r "To nieprawda! To jedno z najlepszych dań, jakie kiedykolwiek stworzyłem! Może Pan nie zna się na jedzeniu!"
-                "Profesor wychodzi z restauracji z postanowieniem, e nigdy ju tu nie wróci."
+                "Profesor wychodzi z restauracji z postanowieniem, ze nigdy juz tu nie wróci."
         
     else:
         show profesor happy
@@ -117,10 +120,3 @@ label start:
 
 
         "Koniec."
-
-
-        
-
-
-
-
