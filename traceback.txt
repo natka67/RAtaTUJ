@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 36, in script
+    $ persistent.ocena_profesora += 4
+  File "game/script.rpy", line 36, in <module>
+    $ persistent.ocena_profesora += 4
+TypeError: unsupported operand type(s) for +=: 'NoneType' and 'int'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 36, in script
+    $ persistent.ocena_profesora += 4
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 36, in <module>
+    $ persistent.ocena_profesora += 4
+TypeError: unsupported operand type(s) for +=: 'NoneType' and 'int'
+
+Darwin-23.1.0-x86_64-i386-64bit x86_64
+Ren'Py 7.6.3.23091805
+RAtaTUJ 1.0
+Sun Dec 17 21:44:33 2023
