@@ -1,26 +1,65 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 36, in script
-    $ persistent.ocena_profesora += 4
-  File "game/script.rpy", line 36, in <module>
-    $ persistent.ocena_profesora += 4
-TypeError: unsupported operand type(s) for +=: 'NoneType' and 'int'
+While loading <renpy.display.im.Image object (u'remy_normal.png') at 0x7fa9f34af890>:
+  File "game/script.rpy", line 30, in script
+    with dissolve
+IOError: Couldn't find file 'remy_normal.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 36, in script
-    $ persistent.ocena_profesora += 4
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 36, in <module>
-    $ persistent.ocena_profesora += 4
-TypeError: unsupported operand type(s) for +=: 'NoneType' and 'int'
+  File "game/script.rpy", line 30, in script
+    with dissolve
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 1678, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/exports.py", line 1758, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 2981, in do_with
+    clear=clear)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 4175, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 2785, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/transition.py", line 378, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/transform.py", line 909, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/image.py", line 513, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/image.py", line 316, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 676, in render
+    return cache.get(self, render=True)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 330, in get
+    surf = image.load()
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 803, in load
+    raise e
+IOError: Couldn't find file 'remy_normal.png'.
 
 Darwin-23.1.0-x86_64-i386-64bit x86_64
 Ren'Py 7.6.3.23091805
 RAtaTUJ 1.0
-Sun Dec 17 21:44:33 2023
+Mon Dec 18 22:49:28 2023

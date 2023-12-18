@@ -1,4 +1,4 @@
-Mon Dec 18 22:26:26 2023
+Mon Dec 18 22:49:20 2023
 Darwin-23.1.0-x86_64-i386-64bit
 Ren'Py 7.6.3.23091805
  
@@ -7,13 +7,13 @@ Bootstrap to the start of init.init. took 0.06s
 Early init. took 0.00s
 Loader init. took 0.01s
 Loading error handling. took 0.02s
-Loading script. took 0.16s
-Loading save slot metadata. took 0.05s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.03s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
+Reloading save slot metadata. took 0.06s
 Index archives took 0.00s
 Backing up script files to '/Users/natalia/Library/RenPy/backups/RAtaTUJ':
 Dump and make backups. took 0.07s
@@ -23,12 +23,12 @@ Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
+Analyze screens took 0.02s
 Save screen analysis took 0.03s
-Prepare screens took 0.09s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -45,10 +45,60 @@ Version: '2.1 ATI-5.1.35'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1690, 951) drawable=(3380, 1902)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+
+Full traceback:
+  File "game/script.rpy", line 30, in script
+    with dissolve
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 1678, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/exports.py", line 1758, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 2981, in do_with
+    clear=clear)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 4175, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 2785, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/transition.py", line 378, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/transform.py", line 909, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/image.py", line 513, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/image.py", line 316, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 676, in render
+    return cache.get(self, render=True)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 330, in get
+    surf = image.load()
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 803, in load
+    raise e
+IOError: Couldn't find file 'remy_normal.png'.
+
+While loading <renpy.display.im.Image object (u'remy_normal.png') at 0x7fa9f34af890>:
+  File "game/script.rpy", line 30, in script
+    with dissolve
+IOError: Couldn't find file 'remy_normal.png'.

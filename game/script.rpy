@@ -7,6 +7,14 @@ define r = Character("Remy")
 define p = Character("Profesor")
 default ocena_profesora = 0
     
+image remy happy = "remy_happy.png"
+image remy normal = "remy_normal.png"
+image remy unhappy = "remy_unhappy.png"
+
+image profesor happy = "profesor_happy.png"
+image profesor normal = "profesor_neutral.png"
+image profesor unhappy = "profesor_unhappy.png"
+image profesor sick = "profesor_sick.png"
 
 label start:
 
