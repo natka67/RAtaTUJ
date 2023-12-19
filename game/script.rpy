@@ -37,15 +37,18 @@ label start:
     menu:
         "Przygotuj coś lekkiego i eleganckiego.":
             $ danie = "Krewetki z mango"
-            show shrimps
+            image food = "shrimps.png"
+            show food
             $ ocena_profesora += 2  
         "Zaskocz go czymś nieoczekiwanym.":
             $ danie = "Kaczka w sosie borówkowym"
-            show duck
+            image food = "duck.png"
+            show food
             $ ocena_profesora += 4
         "Postaw na klasyczną francuską kuchnię.":
             $ danie = "Filet z kurczaka po francusku"
-            show chicken
+            image food = "chicken.png"
+            show food
             $ ocena_profesora += 6 
 
     show remy happy

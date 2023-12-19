@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object (u'profesor_happy.png') at 0x7fe27e2e37d0>:
-  File "game/script.rpy", line 103, in script
-    p "Doskonałe! To jedno z najlepszych dań, jakie kiedykolwiek próbowałem. Jesteś prawdziwym mistrzem kulinarnym!"
-IOError: Couldn't find file 'profesor_happy.png'.
+While loading <renpy.display.im.Image object (u'chicken.png') at 0x7f8171bffe50>:
+  File "game/script.rpy", line 55, in script
+    r "Najlepszym wyborem będzie [danie]."
+IOError: Couldn't find file 'chicken.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 103, in script
-    p "Doskonałe! To jedno z najlepszych dań, jakie kiedykolwiek próbowałem. Jesteś prawdziwym mistrzem kulinarnym!"
+  File "game/script.rpy", line 55, in script
+    r "Najlepszym wyborem będzie [danie]."
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 930, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/exports.py", line 1474, in say
@@ -59,9 +59,9 @@ Full traceback:
     surf = image.load()
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 803, in load
     raise e
-IOError: Couldn't find file 'profesor_happy.png'.
+IOError: Couldn't find file 'chicken.png'.
 
 Darwin-23.1.0-x86_64-i386-64bit x86_64
 Ren'Py 7.6.3.23091805
 RAtaTUJ 1.0
-Tue Dec 19 15:02:08 2023
+Tue Dec 19 15:20:41 2023
