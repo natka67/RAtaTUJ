@@ -1,14 +1,14 @@
-Tue Dec 19 16:15:23 2023
+Tue Dec 19 16:23:26 2023
 Darwin-23.1.0-x86_64-i386-64bit
 Ren'Py 7.6.3.23091805
  
 
 Bootstrap to the start of init.init. took 0.06s
 Early init. took 0.00s
-Loader init. took 0.02s
+Loader init. took 0.01s
 Loading error handling. took 0.02s
 Loading script. took 0.16s
-Loading save slot metadata. took 0.05s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.03s
 Loading analysis data. took 0.02s
@@ -16,7 +16,7 @@ Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
 Index archives took 0.00s
 Backing up script files to '/Users/natalia/Library/RenPy/backups/RAtaTUJ':
-Dump and make backups. took 0.07s
+Dump and make backups. took 0.06s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
 Initial gc. took 0.02s
@@ -28,12 +28,12 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.03s
-Prepare screens took 0.09s
+Prepare screens took 0.07s
 Save pyanalysis. took 0.03s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.27s
+Interface start. took 0.24s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1792, 1120)

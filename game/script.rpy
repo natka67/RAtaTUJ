@@ -26,17 +26,17 @@ image shrimp = "shrimps.png"
 image coctail = "coctail.png"
 image tiramisu = "tiramisu.png"
 
-define music_kitchen = "music/kitchen_theme.mp3"
-define music_restaurant = "music/restaurant_theme.mp3"
+define music_kitchen = "audio/kitchen_theme.mp3"
+define music_restaurant = "audio/restaurant_theme.mp3"
 
 transform center:
     xalign 0.5 yalign 0.5
 
 transform right_side:
-    xalign 1.0 yalign 0.5
+    xalign 0.8 yalign 0.5
 
 transform left_side:
-    xalign 0.0 yalign 0.5
+    xalign 0.2 yalign 0.5
 
 transform resize_1920_1080:
     size (1920, 1080)
