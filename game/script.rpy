@@ -21,7 +21,7 @@ image restaurant = "restaurant.png"
 image kitchen = "kitchen.png"
 label start:
 
-    scene cue
+    scene ceue
     with dissolve
 
     "Paryż. Restauracja UEP."
