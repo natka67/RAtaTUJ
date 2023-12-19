@@ -52,7 +52,7 @@ label start:
             $ ocena_profesora += 6 
 
     r "Najlepszym wyborem będzie [danie]."
-
+    hide food
     "Remy zaczyna przygotowywać danie. W trakcie potrzebuje wsparcia w dwóch decyzjach.."
     show remy happy
     r "Czy dodać sól?"

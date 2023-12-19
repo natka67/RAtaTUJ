@@ -1,4 +1,4 @@
-Tue Dec 19 15:31:37 2023
+Tue Dec 19 15:33:46 2023
 Darwin-23.1.0-x86_64-i386-64bit
 Ren'Py 7.6.3.23091805
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init. took 0.05s
 Early init. took 0.00s
 Loader init. took 0.01s
 Loading error handling. took 0.02s
-Loading script. took 0.16s
+Loading script. took 0.15s
 Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.03s
@@ -26,14 +26,14 @@ Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
+Analyze screens took 0.02s
 Save screen analysis took 0.03s
-Prepare screens took 0.09s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.24s
+Interface start. took 0.25s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1792, 1120)
