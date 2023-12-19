@@ -1,67 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object (u'chicken.png') at 0x7f817079cb10>:
-  File "game/script.rpy", line 55, in script
-    r "Najlepszym wyborem będzie [danie]."
-IOError: Couldn't find file 'chicken.png'.
+While running game code:
+  File "game/script.rpy", line 143, in script
+    if wybrany_deser = "Koktajl owocowy":
+SyntaxError: invalid syntax (script.rpy, line 143)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 55, in script
-    r "Najlepszym wyborem będzie [danie]."
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 930, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/exports.py", line 1474, in say
-    who(what, *args, **kwargs)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/character.py", line 1352, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/character.py", line 1006, in do_display
-    **display_args)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/character.py", line 693, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 3582, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 4175, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 2785, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 330, in get
-    surf = image.load()
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 803, in load
+  File "game/script.rpy", line 143, in script
+    if wybrany_deser = "Koktajl owocowy":
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 2133, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/python.py", line 1151, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/python.py", line 1088, in py_compile
     raise e
-IOError: Couldn't find file 'chicken.png'.
+SyntaxError: invalid syntax (script.rpy, line 143)
 
 Darwin-23.1.0-x86_64-i386-64bit x86_64
 Ren'Py 7.6.3.23091805
 RAtaTUJ 1.0
-Tue Dec 19 15:20:59 2023
+Tue Dec 19 16:06:00 2023
