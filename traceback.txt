@@ -1,21 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object (u'remy_normal.png') at 0x7fa9f34af890>:
-  File "game/script.rpy", line 30, in script
-    with dissolve
-IOError: Couldn't find file 'remy_normal.png'.
+While loading <renpy.display.im.Image object (u'profesor_happy.png') at 0x7fe27e2e37d0>:
+  File "game/script.rpy", line 103, in script
+    p "Doskonałe! To jedno z najlepszych dań, jakie kiedykolwiek próbowałem. Jesteś prawdziwym mistrzem kulinarnym!"
+IOError: Couldn't find file 'profesor_happy.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 30, in script
-    with dissolve
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 1678, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/exports.py", line 1758, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 2981, in do_with
-    clear=clear)
+  File "game/script.rpy", line 103, in script
+    p "Doskonałe! To jedno z najlepszych dań, jakie kiedykolwiek próbowałem. Jesteś prawdziwym mistrzem kulinarnym!"
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/exports.py", line 1474, in say
+    who(what, *args, **kwargs)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/character.py", line 1006, in do_display
+    **display_args)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 3582, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/core.py", line 4175, in interact_core
@@ -26,10 +32,6 @@ Full traceback:
   File "render.pyx", line 266, in renpy.display.render.render
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
     surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/transition.py", line 378, in render
-    top = render(self.new_widget, width, height, st, at)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 266, in renpy.display.render.render
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/layout.py", line 888, in render
@@ -57,9 +59,9 @@ Full traceback:
     surf = image.load()
   File "/Users/natalia/Desktop/Studia/TSM/renpy-7.6.3-sdk/renpy/display/im.py", line 803, in load
     raise e
-IOError: Couldn't find file 'remy_normal.png'.
+IOError: Couldn't find file 'profesor_happy.png'.
 
 Darwin-23.1.0-x86_64-i386-64bit x86_64
 Ren'Py 7.6.3.23091805
 RAtaTUJ 1.0
-Mon Dec 18 22:51:13 2023
+Tue Dec 19 15:02:08 2023
