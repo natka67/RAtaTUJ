@@ -43,18 +43,21 @@ label start:
             $ danie = "Krewetki z mango"
             show shrimp
             $ ocena_profesora += 2  
+            r "Najlepszym wyborem będzie [danie]."
+            hide shrimp   
         "Zaskocz go czymś nieoczekiwanym.":
             $ danie = "Kaczka w sosie borówkowym"
             show duck
+            r "Najlepszym wyborem będzie [danie]."
+            hide duck   
             $ ocena_profesora += 4
         "Postaw na klasyczną francuską kuchnię.":
             $ danie = "Filet z kurczaka po francusku"
             show chicken
             $ ocena_profesora += 6 
+            r "Najlepszym wyborem będzie [danie]."
+            hide chicken   
 
-    r "Najlepszym wyborem będzie [danie]."
-    r "[ocena_profesora]"
-    hide food
     "Remy zaczyna przygotowywać danie. W trakcie potrzebuje wsparcia w dwóch decyzjach.."
     show remy happy
     r "Czy dodać sól?"
