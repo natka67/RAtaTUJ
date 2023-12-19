@@ -16,6 +16,7 @@ image profesor neutral = "profesor_neutral.png"
 image profesor unhappy = "profesor_unhappy.png"
 image profesor sick = "profesor_sick.png"
 
+image ceue = "ceue.png"
 image restaurant = "restaurant.png"
 image kitchen = "kitchen.png"
 label start:
