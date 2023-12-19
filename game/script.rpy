@@ -107,16 +107,19 @@ label start:
         show profesor happy
         p "Doskonałe! To jedno z najlepszych dań, jakie kiedykolwiek próbowałem. Jesteś prawdziwym mistrzem kulinarnym!"
         "Remy jest zadowolony z pozytywnej oceny profesora. Teraz musi zadecydować, jaki deser zaproponować."
+        hide profesor happy
         menu:
             "Tiramisu":
                 "Remy proponuje klasyczne tiramisu jako deser."
+                show remy happy
                 r "Mam dla Pana coś wyjątkowego - klasyczne tiramisu z własnym akcentem."
                 $ wybrany_deser = "Tiramisu"
             "Koktajl owocowy":
                 "Remy proponuje lekki koktajl owocowy jako deser."
+                show remy happy
                 r "Może coś orzeźwiającego? Proszę spróbować naszego koktajlu owocowego."
                 $ wybrany_deser = "Koktajl owocowy"
-
+        hide remy happy
         "Profesor entuzjastycznie zgadza się spróbować [wybrany_deser] jako deseru."
         if ocena_profesora = "Koktajl owocowy":
             show profesor sick
