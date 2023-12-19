@@ -38,19 +38,19 @@ label start:
         "Przygotuj coś lekkiego i eleganckiego.":
             $ danie = "Krewetki z mango"
             image food = "shrimps.png"
-
+            show food
             $ ocena_profesora += 2  
         "Zaskocz go czymś nieoczekiwanym.":
             $ danie = "Kaczka w sosie borówkowym"
             image food = "duck.png"
+            show food
             $ ocena_profesora += 4
         "Postaw na klasyczną francuską kuchnię.":
             $ danie = "Filet z kurczaka po francusku"
             image food = "chicken.png"
+            show food
             $ ocena_profesora += 6 
 
-    show food
-    hide food
     r "Najlepszym wyborem będzie [danie]."
 
     "Remy zaczyna przygotowywać danie. W trakcie potrzebuje wsparcia w dwóch decyzjach.."
@@ -89,7 +89,9 @@ label start:
     if ocena_profesora < 7:
         
         show profesor unhappy
+        
         p "Niestety, Remy, ale to danie mi nie przypadło do gustu. Musisz jeszcze popracować nad smakiem."
+        hide profesor unhappy
         show remy unhappy
         menu:
             "Przyjmij krytykę z pokorą.":
