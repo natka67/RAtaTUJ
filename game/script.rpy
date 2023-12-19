@@ -12,10 +12,12 @@ image remy normal = "remy_normal.png"
 image remy unhappy = "remy_unhappy.png"
 
 image profesor happy = "profesor_happy.png"
-image profesor normal = "profesor_neutral.png"
+image profesor neutral = "profesor_neutral.png"
 image profesor unhappy = "profesor_unhappy.png"
 image profesor sick = "profesor_sick.png"
 
+image restaurant = "restaurant.png"
+image kitchen = "kitchen.png"
 label start:
 
     scene cue
@@ -26,7 +28,7 @@ label start:
     "Remy postanawia przygotować wyjątkowe danie, aby zdobyć uznanie Profesora."
 
     scene kitchen with dissolve
-    show remy normal
+    show remy happy
     with dissolve
 
     "W kuchni, Remy zastanawia się, jakie danie zaskoczy profesora."
