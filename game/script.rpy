@@ -51,11 +51,10 @@ label start:
 
     show food
     hide food
-    show remy happy
     r "Najlepszym wyborem będzie [danie]."
 
     "Remy zaczyna przygotowywać danie. W trakcie potrzebuje wsparcia w dwóch decyzjach.."
-    
+    show remy happy
     r "Czy dodać sól?"
     menu:
         "Tak dodaj sól":
