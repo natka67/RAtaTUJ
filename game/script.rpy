@@ -19,6 +19,10 @@ image profesor sick = "profesor_sick.png"
 image ceue = "ceue.png"
 image restaurant = "restaurant.png"
 image kitchen = "kitchen.png"
+
+image duck = "duck.png"
+image chicken = "chicken.png"
+image shrimp = "shrimps.png"
 label start:
 
     scene ceue
@@ -37,21 +41,19 @@ label start:
     menu:
         "Przygotuj coś lekkiego i eleganckiego.":
             $ danie = "Krewetki z mango"
-            image food = "shrimps.png"
-            show food
+            show shrimp
             $ ocena_profesora += 2  
         "Zaskocz go czymś nieoczekiwanym.":
             $ danie = "Kaczka w sosie borówkowym"
-            image food = "duck.png"
-            show food
+            show duck
             $ ocena_profesora += 4
         "Postaw na klasyczną francuską kuchnię.":
             $ danie = "Filet z kurczaka po francusku"
-            image food = "chicken.png"
-            show food
+            show chicken
             $ ocena_profesora += 6 
 
     r "Najlepszym wyborem będzie [danie]."
+    r "[ocena_profesora]"
     hide food
     "Remy zaczyna przygotowywać danie. W trakcie potrzebuje wsparcia w dwóch decyzjach.."
     show remy happy
